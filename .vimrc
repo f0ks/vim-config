@@ -12,8 +12,10 @@ if has("gui_running")
 
     set cursorline
 
+    " linux
     if has("gui_gtk2")
         set guifont=Liberation\ Mono\ 10
+    " windows
     elseif has("gui_win32")
         set guifont=Consolas:h10
     endif
