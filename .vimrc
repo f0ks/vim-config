@@ -1,7 +1,7 @@
 
 if has("gui_running")
 
-    colorscheme fruit
+    colorscheme darkZ
 
     set guioptions-=m  "hide menu
     set guioptions-=T  "hide toolbar
@@ -12,10 +12,8 @@ if has("gui_running")
 
     set cursorline
 
-    " linux
     if has("gui_gtk2")
         set guifont=Liberation\ Mono\ 10
-    " windows
     elseif has("gui_win32")
         set guifont=Consolas:h10
     endif
@@ -25,6 +23,8 @@ endif
 syntax on 
 set nocompatible
 set enc=utf-8
+
+set hidden
 
 set nobackup
 set nowritebackup
