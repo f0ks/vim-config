@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='C:/Users/Khamidullin.A/Dropbox/Docsvision/аттрибутивный поиск/layout/css/advancedsearch'
+let g:netrw_dirhist_2='C:/Users/Khamidullin.A/Dropbox/Docsvision/4easycm-filter/css/filter'
+let g:netrw_dirhist_3='c:\nginx'

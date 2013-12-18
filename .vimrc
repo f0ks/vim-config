@@ -1,25 +1,41 @@
 
 if has("gui_running")
 
-    colorscheme darkZ
+    "colorscheme moria
+    "colorscheme Wombat
 
-    set guioptions-=m  "hide menu
+    colorscheme Rootwater
+
+    "set guioptions-=m  "hide menu
     set guioptions-=T  "hide toolbar
     set guioptions-=r
+    set guioptions-=L
 
-    set lines=32
-    set columns=100 
+    set lines=44
+    set columns=130 
 
     set cursorline
 
     if has("gui_gtk2")
-        set guifont=Liberation\ Mono\ 10
+        set guifont=Liberation\ Mono\ 13
     elseif has("gui_win32")
-        set guifont=Consolas:h10
+        set guifont=Consolas:h11
+    elseif has("gui_macvim")
+        set guifont=Monaco:h13
+    endif
+
+
+    "mac
+    if has("unix")
+        let s:uname = system("uname -s")
+        if s:uname == "Darwin"
+        " Do Mac stuff here
+      endif
     endif
 
 endif
 
+        set guifont=Monaco:h13
 syntax on 
 set nocompatible
 set enc=utf-8
@@ -57,6 +73,11 @@ set nofoldenable
 set showmode
 set showcmd
 set nowrap linebreak nolist
+
+" source ftplugin folder 
+"set ft=X
+"filetype plugin indent on
+
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
@@ -67,6 +88,9 @@ ino jj <esc>
 cno jj <c-c>
 ino оо <esc>
 cno оо <c-c>
+
+imap <C-Return> <esc>o
+
 
 set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
@@ -83,4 +107,12 @@ imap <C-k> <esc>:bn<cr>i
 " show/hide non-ptinting characters
 nmap <C-L> :set list<cr>
 nmap <C-N> :set nolist<cr>
+
+inoremap ;<cr> <end>;<cr>
+
+
+"auto open tree in new tab
+autocmd VimEnter * NERDTree ~/
+autocmd VimEnter * wincmd p
+autocmd BufEnter * NERDTreeMirror
 
