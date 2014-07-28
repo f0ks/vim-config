@@ -41,7 +41,7 @@ set ignorecase
 set smartcase
 
 set scrolloff=1
-set undofile
+"set undofile
 
 set foldmethod=indent
 set foldnestmax=10
