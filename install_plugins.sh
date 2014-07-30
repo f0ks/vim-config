@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# this script will install pathogen and my favorite plugins from github
+# this script will install pathogen and my favorite plugins from github,
+# and create symlink to .vimrc from this rep
 # works on linux, mac and windows(msys)
 
 case "$OSTYPE" in
@@ -12,8 +13,7 @@ case "$OSTYPE" in
     ;;
 esac
 
-CURDIR=$(pwd)
-ln $CURDIR/vim-config/.vimrc ~/.vimrc
+ln $(pwd)/vim-config/.vimrc ~/.vimrc
 
 mkdir -p ~/$VIMHOME/autoload ~/$VIMHOME/bundle
 cd ~/$VIMHOME/autoload
