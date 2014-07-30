@@ -17,7 +17,7 @@ ln $CURDIR/vim-config/.vimrc ~/.vimrc
 
 mkdir -p ~/$VIMHOME/autoload ~/$VIMHOME/bundle
 cd ~/$VIMHOME/autoload
-wget https://tpo.pe/pathogen.vim
+curl -O https://tpo.pe/pathogen.vim
 cd ~/$VIMHOME/bundle
 
 git clone https://github.com/mattn/emmet-vim.git 
