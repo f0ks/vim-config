@@ -12,6 +12,9 @@ case "$OSTYPE" in
     ;;
 esac
 
+CURDIR=$(pwd)
+ln $CURDIR/vim-config/.vimrc ~/.vimrc
+
 mkdir -p ~/$VIMHOME/autoload ~/$VIMHOME/bundle
 cd ~/$VIMHOME/autoload
 wget https://tpo.pe/pathogen.vim
@@ -22,6 +25,7 @@ git clone https://github.com/othree/html5.vim.git
 git clone https://github.com/Valloric/MatchTagAlways.git
 git clone https://github.com/fholgado/minibufexpl.vim.git
 git clone https://github.com/scrooloose/nerdtree.git
+git clone https://github.com/vim-scripts/bufkill.vim.git
 git clone https://github.com/ervandew/supertab.git
 git clone https://github.com/Townk/vim-autoclose.git
 git clone https://github.com/flazz/vim-colorschemes.git

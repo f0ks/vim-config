@@ -1,3 +1,6 @@
+" created by Albert Khamidullin
+" works on linux, mac and windows
+
 if has("gui_running")
     set guioptions-=m  "hide menu
     set guioptions-=T  "hide toolbar
@@ -8,7 +11,7 @@ if has("gui_running")
     set cursorline
     if has("gui_gtk2")
         "Linux
-        set guifont=Liberation\ Mono\ 10 
+        set guifont=Liberation\ Mono\ 10
     elseif has("gui_win32")
         "Windows
         set guifont=Consolas:h10
@@ -21,6 +24,9 @@ endif
 syntax on 
 set nocompatible
 set enc=utf-8
+set ffs=unix,dos
+
+filetype plugin on
 
 set hidden
 
@@ -73,6 +79,10 @@ nmap <C-k> :bn<cr>
 vmap <C-k> <esc>:bn<cr>i
 imap <C-k> <esc>:bn<cr>i
 
+"close buffer by ctrl-Q, keeps splits (and nerdtree) 
+"buffrekill.vim plugin
+map <C-q> :BW<cr>
+
 " non-ptinting characters
 set listchars=eol:¶,tab:>-,trail:~,extends:>,precedes:<
 " show/hide non-ptinting characters
@@ -85,4 +95,5 @@ execute pathogen#infect()
 
 autocmd VimEnter * NERDTree .
 
-colorscheme grb256
+colorscheme github
+

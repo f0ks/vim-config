@@ -1,2 +1,5 @@
-1) put .vimrc to home dir
-2) run install_plugins.sh
+## Usage ##
+
+```
+git clone https://github.com/f0ks/vim-config.git && sh vim-config/install_plugins.sh
+```
