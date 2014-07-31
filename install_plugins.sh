@@ -31,4 +31,5 @@ git clone https://github.com/Townk/vim-autoclose.git
 git clone https://github.com/flazz/vim-colorschemes.git
 git clone https://github.com/skammer/vim-css-color.git
 git clone https://github.com/groenewege/vim-less.git
+git clone https://github.com/tpope/vim-commentary.git
 
