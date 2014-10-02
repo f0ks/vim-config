@@ -19,6 +19,8 @@ if has("gui_running")
         "Mac
         set guifont=Monaco:h12
     endif
+
+    autocmd VimEnter * NERDTree .
 endif
 
 syntax on 
@@ -93,7 +95,6 @@ inoremap ;<cr> <end>;<cr>
 
 execute pathogen#infect()
 
-autocmd VimEnter * NERDTree .
 
 colorscheme github
 
