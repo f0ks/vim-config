@@ -1,0 +1,7 @@
+ino jj <esc>
+cno jj <c-c>
+
+imap <C-Return> <esc>o
+
+
+

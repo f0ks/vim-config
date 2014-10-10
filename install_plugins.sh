@@ -3,6 +3,7 @@
 # this script will install pathogen and my favorite plugins from github,
 # and create symlink to .vimrc from this rep
 # works on linux, mac and windows(msys)
+# Also includes .ideavimrc (for IntelliJ Idea vim plugin)
 
 case "$OSTYPE" in
     linux*|darwin*|bsd*)
@@ -14,6 +15,7 @@ case "$OSTYPE" in
 esac
 
 ln $(pwd)/vim-config/.vimrc ~/.vimrc
+ln $(pwd)/vim-config/.ideavimrc ~/.ideavimrc
 
 mkdir -p ~/$VIMHOME/autoload ~/$VIMHOME/bundle
 cd ~/$VIMHOME/autoload
